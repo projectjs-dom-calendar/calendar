@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <div id="root">
+                <h1>Calendar 2019</h1>
+                <div id="calendar-container">
+                    <div id="next-calendar-container"></div>
+                </div>
+            </div>    
+            <input type="button" id="button1" onclick=" next('#next-calendar-container');" value="nextmonth"/>
+    <script src="CalendarFirst.js"></script>
+    <script>
+        //създавам си масив от събития, които ще добавя за определени дати
+        //тези събития са под формата на обекти, които са част от масив със съответните свойства и стойности
+
+        var events = [
+            {
+                title : 'Concert',
+                date : '3',
+                hour : '13:00'
+            },
+            {
+                title : 'Wine Festivale',
+                date : '10',
+                hour : '20:00'
+            },
+            {
+                title : 'Fitness Motivation Event',
+                date : '25',
+                hour : '10:00'
+            }
+
+        ];
+        //искаме да направим календара в подадения от нас елемент container-calendar
+        //и да попълни тези събития(events)
+        createCalendar('#calendar-container',events);
+        next('#next-calendar-container');
+    </script>
+
+    
+</body>
+</html> 
